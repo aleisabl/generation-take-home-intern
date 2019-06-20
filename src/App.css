@@ -3,7 +3,9 @@
 }
 
 #map {
-  height: 100vh;
-  margin: 0;
+  height: 50vh;
+  border: 2rem;
+  border-radius: 4rem;
+  margin: 20;
   padding: 0;
 }
