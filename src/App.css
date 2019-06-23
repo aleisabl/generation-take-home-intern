@@ -7,8 +7,14 @@ h2 {
   color: #B1C5B3
 }
 
+#Logo {
+  width: 11rem;
+  margin-top: -9rem;
+  margin-left: 2rem;
+}
+
 #map {
-  margin-top: 2rem;
+  margin-top: 0;
   height: 69vh;  /* The height is 400 pixels */
   width: 80%;  /* The width is the width of the web page */
   margin-left: 9rem;

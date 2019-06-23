@@ -1,9 +1,8 @@
 
 import React, { Component } from 'react'
 import './App.css'
-import axios from 'axios'
-import { ReactComponent as Logo } from './logo.svg';
 import apiKey from './Constants'
+import Logo from './assets/logo.png';
 
 const storeDirectory = require('./store_directory.json');
 
@@ -71,7 +70,10 @@ class YourComponent extends Component {
   render() {
     return (
       <main>
-        <div id="map"></div>
+                <img id="Logo" src={Logo} alt="website logo"/>
+
+        <div id="map">
+        </div>
       </main>
     )
   }
