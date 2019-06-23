@@ -1,11 +1,22 @@
-.Intro{
-  margin: 15px;
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: #B1C5B3
 }
 
 #map {
-  height: 50vh;
+  margin-top: 2rem;
+  height: 69vh;  /* The height is 400 pixels */
+  width: 80%;  /* The width is the width of the web page */
+  margin-left: 9rem;
   border: 2rem;
   border-radius: 4rem;
-  margin: 20;
-  padding: 0;
-}
+ }
+ 
+
+ #list {
+     margin-left: 70rem;
+ }
