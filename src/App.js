@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import './App.css'
 import axios from 'axios'
 import { ReactComponent as Logo } from './logo.svg';
+import apiKey from './Constants'
 
 const storeDirectory = require('./store_directory.json');
 
@@ -20,12 +21,11 @@ class YourComponent extends Component {
   }
 
   renderMap = () => {
-    loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyCOzgQyguR0MhgN_xU6-WdLzGgjId5wZJY&callback=initMap')
+    loadScript(`https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`)
     window.initMap = this.initMap
   }
 
  
-
   initMap = () => {
 
     // Creating the Map
