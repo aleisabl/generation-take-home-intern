@@ -1,6 +1,10 @@
 ### My Solution:
 [StudentMaps](https://studentmaps.netlify.com/)
 
+### User History #3:
+Instead of clicking on the marked and then adding the store to your favorites, I added a form so the user
+can add whatever store he wants or remembers to their list.
+
 Generation Take-Home Coding Challenge
 =================================
 This is a take-home coding challenge used to help evaluate candidates
