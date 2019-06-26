@@ -3,41 +3,48 @@ import React, { Component } from 'react'
 import './App.css'
 import apiKey from './Constants'
 import Logo from './assets/logo.png';
+import StoreForm from './StoreForm';
 
 const storeDirectory = require('./store_directory.json');
 
+class App extends Component {
 
-class YourComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {list: []};
 
-  state = {
-    CoordinatesState: []
 
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  //First it runs getCoordinates wich it fetchs the url of the sores and passes it
+  //First it runs renderMap wich loads the google maps api
   componentDidMount() {
     this.renderMap()
   }
-
+  
   renderMap = () => {
     loadScript(`https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`)
     window.initMap = this.initMap
   }
 
- 
+  handleClick(e) {
+
+      this.setState(prevState => ({
+        list: prevState.list.concat('hola')
+      }));
+
+      alert(this.state.list)
+     
+  }
+
   initMap = () => {
 
     // Creating the Map
     let map = new window.google.maps.Map(document.getElementById('map'), {
       center: { lat: 19.432608, lng: -99.133209 },
-      zoom: 8
+      zoom: 12
     })
-
-          // Creating an InfoWindow
-          let infowindow = new window.google.maps.InfoWindow()
-
-          // Display the dynamic markers
-          let contentString = `Red Barn Store`
 
     //maping thru the JSON rather than getting the data via axios
     //creating the marker for every position and passing name, title, etc
@@ -49,31 +56,43 @@ class YourComponent extends Component {
         map,
       });
 
+      // Display the dynamic markers
+      let contentString =   `<h2 id="store-name">${store.Name} <h2/>
+                            <p id="address">Address: ${store.Address}<p/>
+                            <button type="button" id="add-btn" onClick={this.handleClick}>Add</button> 
+                            ` 
+                                                  
+      // creating an InfoWindow
+      let infowindow = new window.google.maps.InfoWindow()
 
-    // Click on A Marker! It shows infowindow
-    marker.addListener('click', function () {
+      // click on A Marker! It shows infowindow
+      marker.addListener('click', function () {
+        
+        // changing the content of indowindow passing contentstring
+        infowindow.setContent(contentString)
 
-      // Changing the content of indowindow passing contentstring
-      infowindow.setContent(contentString)
-
-      // Opening InfoWindow
-      infowindow.open(map, marker)
+        // opening InfoWindow
+        infowindow.open(map, marker)
+      })
+      
     })
-
-    })
-
-    
-
-
   }
+
 
   render() {
     return (
-      <main>
-                <img id="Logo" src={Logo} alt="website logo"/>
 
-        <div id="map">
-        </div>
+      <main>
+
+        <h1>Red Barn Stores in Mexico City</h1>
+        <h2>Open your favorite stores and add them to your list!</h2>
+
+        <img id="Logo" src={Logo} alt="website logo" />
+
+        <div id="map"></div>
+
+        <StoreForm/>
+
       </main>
     )
   }
@@ -88,4 +107,4 @@ function loadScript(url) {
   index.parentNode.insertBefore(script, index)
 }
 
-export default YourComponent;
+export default App;

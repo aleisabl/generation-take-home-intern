@@ -1,28 +1,76 @@
-h1 {
+/* Titles */
+
+h1, #store-name {
+  color: #70AAB4;
+}
+
+h2, h3, h1, #input-value {
   text-align: center;
 }
 
-h2 {
-  text-align: center;
-  color: #B1C5B3
+/* Buttons */
+
+.btn-submit {
+  width: 5rem;
+  font-size: 1rem;
+ }
+
+#add-btn {
+  width: 4rem;
+  font-size: 0.9rem;
 }
+
+.list-button {
+  width: 6rem;
+  font-size: 1rem;
+  margin-left: 55rem;
+  margin-bottom: 1rem;
+}
+
+.btn-submit, .list-button, #add-btn {
+
+  border-radius: 2rem;
+  background-color: #B1C5B3;
+  color: white;
+  height: 2rem;
+}
+
+/* Assets */
 
 #Logo {
   width: 11rem;
   margin-top: -9rem;
-  margin-left: 2rem;
+  margin-left: -1.5rem;
 }
 
 #map {
-  margin-top: 0;
-  height: 69vh;  /* The height is 400 pixels */
+  height: 60vh;  /* The height is 400 pixels */
   width: 80%;  /* The width is the width of the web page */
-  margin-left: 9rem;
-  border: 2rem;
+  margin-left: 6rem;
   border-radius: 4rem;
  }
- 
 
- #list {
-     margin-left: 70rem;
- }
+/*  Forms */
+.form-control {
+  margin: 1rem;
+  color:#B1C5B3;
+  font-size: 1.5rem;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 2rem;
+}
+
+/*  Media querys for phones */
+
+@media (max-width: 400px) {
+  #Logo {
+    margin-top: -2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #map {
+    margin-top: -1rem;
+    margin-left: 1.5rem;
+  }
+}
