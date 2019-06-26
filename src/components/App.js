@@ -1,11 +1,11 @@
 
 import React, { Component } from 'react'
-import './App.css'
-import apiKey from './Constants'
-import Logo from './assets/logo.png';
+import './styles/App.css'
+import apiKey from '../Constants'
+import Logo from '../assets/logo.png';
 import StoreForm from './StoreForm';
 
-const storeDirectory = require('./store_directory.json');
+const storeDirectory = require('../store_directory.json');
 
 class App extends Component {
 
@@ -59,7 +59,6 @@ class App extends Component {
       // Display the dynamic markers
       let contentString =   `<h2 id="store-name">${store.Name} <h2/>
                             <p id="address">Address: ${store.Address}<p/>
-                            <button type="button" id="add-btn" onClick={this.handleClick}>Add</button> 
                             ` 
                                                   
       // creating an InfoWindow
@@ -84,8 +83,8 @@ class App extends Component {
 
       <main>
 
-        <h1>Red Barn Stores in Mexico City</h1>
-        <h2>Open your favorite stores and add them to your list!</h2>
+        <h1>Stores in Mexico City</h1>
+        <h2>Open your closest store and add them to your list!</h2>
 
         <img id="Logo" src={Logo} alt="website logo" />
 

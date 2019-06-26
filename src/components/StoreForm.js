@@ -6,7 +6,6 @@ class StoreForm extends React.Component {
     constructor(props) {
       super(props);
       this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-      this.handlePick = this.handlePick.bind(this);
       this.handleAddOption = this.handleAddOption.bind(this);
       this.handleDeleteOption = this.handleDeleteOption.bind(this);
       this.state = {
@@ -60,11 +59,6 @@ class StoreForm extends React.Component {
         options: prevState.options.filter((option) => optionToRemove !== option)
       }));
     }
-    handlePick() {
-      const randomNum = Math.floor(Math.random() * this.state.options.length);
-      const option = this.state.options[randomNum];
-      alert(option);
-    }
     handleAddOption(option) {
       if (!option) {
         return 'Enter valid value to add item';
@@ -80,112 +74,19 @@ class StoreForm extends React.Component {
 
       return (
         <div>
+          <h1>Favorite stores:</h1>
+          <AddOption
+            handleAddOption={this.handleAddOption}
+          />
           <Options
             options={this.state.options}
             handleDeleteOptions={this.handleDeleteOptions}
             handleDeleteOption={this.handleDeleteOption}
           />
-          <AddOption
-            handleAddOption={this.handleAddOption}
-          />
+          
         </div>
       );
     }
   }
 
-  export default StoreForm
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* import React from 'react';
-
-class StoreForm extends React.Component {
-    constructor(props) {
-      super(props);
-  
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.handleRemoveAll = this.handleRemoveAll.bind(this);
-
-      this.state = {value: ''};
-    }
-
-    componentDidMount() {
-
-        try {
-          
-          const json = localStorage.getItem('stores');
-          const stores = JSON.parse(json)
-  
-          if (stores) {
-            this.setState(() => ({ stores }) )
-          }
-  
-        } catch (e) {
-          //Do nothing at all ¬¬
-        }
-  
-        
-      }
-
-      componentDidUpdate(prevProps, prevState) {
-        if (prevState.value.length !== this.state.value.length) {
-          const json = JSON.stringify(this.state.value)
-          localStorage.setItem('stores', json);
-        }
-      }
-  
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
-
-    handleRemoveAll() {
-        this.setState({value: ''});
-    }
-  
-    handleSubmit(event) {
-      alert('Tienda ' + this.state.value + ' agregada exitosamente');
-      event.preventDefault();
-
-    }
-  
-    render() {
-      return (
-
-        <div>
-
-        <form onSubmit={this.handleSubmit}>
-          <label className="store-form">
-          <h2> Tienda: <input type="text" className="form-control"  
-          value={this.state.value} onChange={this.handleChange} />
-          <input className="btn-submit" type="submit" value="Enviar" /> </h2> 
-          </label>
-
-         <p id="input-value">  {localStorage.getItem('stores')} </p>
-          
-        </form>
-
-        <button onClick={this.handleRemoveAll}>Remove</button>
-
-        </div>
-        
-      );
-    }
-  }
-
-  export default StoreForm; */
+  export default StoreForm;

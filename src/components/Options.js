@@ -1,13 +1,14 @@
 import React from 'react'
 import Option from './Option'
+import './styles/Form.css'
 
 const Options = (props) => {
     return (
       <div>
 
-        <button onClick={props.handleDeleteOptions}>Remove All</button>
+        <button className="btn-remove-all" onClick={props.handleDeleteOptions}><strong>Remove All</strong></button>
 
-        {props.options.length === 0 && <p>Please add a store!</p> }
+        {props.options.length === 0 && <h2 className="add-store-text">Please add a store!</h2> }
        
         {
           props.options.map((option) => (

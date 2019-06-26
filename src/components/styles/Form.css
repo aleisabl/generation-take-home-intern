@@ -1,0 +1,20 @@
+.btn-remove-all, .btn-remove, .btn-add-option {
+    background-color: #B1C5B3;
+    height: 1.5rem;
+    border-radius: 1rem;
+    color:white;
+    margin: 4px;
+}
+.option-text {
+    text-align: center;
+}
+
+.add-store-text {
+    margin-top: 1
+}
+
+.input-store {
+    height: 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}

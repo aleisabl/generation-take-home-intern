@@ -1,0 +1,36 @@
+/* Titles */
+
+h1, #store-name {
+  color: #70AAB4;
+}
+
+/* Assets */
+
+#Logo {
+  width: 10rem;
+  margin-top: -9rem;
+  margin-left: -45.5rem;
+}
+
+#map {
+  height: 60vh;  /* The height is 400 pixels */
+  width: 80%;  /* The width is the width of the web page */
+  margin-left: 6rem;
+  border-radius: 4rem;
+ }
+
+
+/*  Media querys for phones */
+
+@media (max-width: 400px) {
+  #Logo {
+    margin-top: -2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #map {
+    margin-top: -1rem;
+    margin-left: 1.5rem;
+  }
+}
