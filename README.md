@@ -1,3 +1,6 @@
+### My Solution:
+[StudentMaps](https://studentmaps.netlify.com/)
+
 Generation Take-Home Coding Challenge
 =================================
 This is a take-home coding challenge used to help evaluate candidates
@@ -51,3 +54,7 @@ Your changes will appear without reloading the browser.
 * **Code quality**: is the code simple, easy to understand, and maintainable?  Are there any code smells or other red flags? Is the coding style consistent with the language's guidelines? Is it consistent throughout the codebase?
 * **UX**:  Is the web interface understandable and pleasing to use? Is it responsive to various screen sizes, and fast to load?
 
+### Autora
+
+Alexandra Fernández, estudiante de la generación 008 de Laboratoria. 
+Solución creada en el transcurso de una semana.

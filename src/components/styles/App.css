@@ -25,6 +25,7 @@ h1, #store-name {
 @media (max-width: 400px) {
   #Logo {
     margin-top: -2rem;
+    margin-left: 0;
   }
 }
 
