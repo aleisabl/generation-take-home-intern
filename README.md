@@ -56,5 +56,5 @@ Your changes will appear without reloading the browser.
 
 ### Autora
 
-Alexandra Fernández, estudiante de la generación 008 de Laboratoria. 
-Solución creada en el transcurso de una semana.
+Alexandra Fernández, studen of the 8th generation of Laboratoria. 
+Created in 6 days.
