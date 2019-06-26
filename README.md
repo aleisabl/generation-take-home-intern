@@ -2,8 +2,8 @@
 [StudentMaps](https://studentmaps.netlify.com/)
 
 ### User History #3:
-Instead of clicking on the marked and then adding the store to your favorites, I added a form so the user
-can add whatever store he wants or remembers to their list.
+Instead of clicking on the marker and then adding the store to your favorites, I added a form so the user
+can add whatever store they want or remembers to their list.
 
 Generation Take-Home Coding Challenge
 =================================
