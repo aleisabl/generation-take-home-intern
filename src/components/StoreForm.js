@@ -9,7 +9,6 @@ class StoreForm extends React.Component {
       this.handleAddOption = this.handleAddOption.bind(this);
       this.handleDeleteOption = this.handleDeleteOption.bind(this);
       this.state = {
-       /*  options: props.options */
         options: []
       };
     }
@@ -63,7 +62,7 @@ class StoreForm extends React.Component {
       if (!option) {
         return 'Enter valid value to add item';
       } else if (this.state.options.indexOf(option) > -1) {
-        return 'This option already exists';
+        return 'This store already exists';
       }
   
       this.setState((prevState) => ({
@@ -74,7 +73,7 @@ class StoreForm extends React.Component {
 
       return (
         <div>
-          <h1>Favorite stores:</h1>
+          <h1 className="favorite-stores" >Favorite stores:</h1>
           <AddOption
             handleAddOption={this.handleAddOption}
           />

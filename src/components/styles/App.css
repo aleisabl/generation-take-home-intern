@@ -1,7 +1,13 @@
 /* Titles */
 
-h1, #store-name {
+#store-name {
   color: #70AAB4;
+}
+
+
+
+.title, .favorite-stores {
+  background-color: grey;
 }
 
 /* Assets */

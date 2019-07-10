@@ -9,15 +9,6 @@ const storeDirectory = require('../store_directory.json');
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {list: []};
-
-
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
-  }
-
   //First it runs renderMap wich loads the google maps api
   componentDidMount() {
     this.renderMap()
@@ -26,16 +17,6 @@ class App extends Component {
   renderMap = () => {
     loadScript(`https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`)
     window.initMap = this.initMap
-  }
-
-  handleClick(e) {
-
-      this.setState(prevState => ({
-        list: prevState.list.concat('hola')
-      }));
-
-      alert(this.state.list)
-     
   }
 
   initMap = () => {
@@ -83,8 +64,8 @@ class App extends Component {
 
       <main>
 
-        <h1>Stores in Mexico City</h1>
-        <h2>Open your closest store and add them to your list!</h2>
+        <h1 className="title">Stores in Mexico City</h1>
+        <h2>Open your favorite stores and add them to your list!</h2>
 
         <img id="Logo" src={Logo} alt="website logo" />
 

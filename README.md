@@ -1,5 +1,6 @@
 ### My Solution:
 [StudentMaps](https://studentmaps.netlify.com/)
+![StudentMapsScreenshot](./src/assets/Screenshot.png)
 
 ### User History #3:
 Instead of clicking on the marker and then adding the store to your favorites, I added a form so the user
